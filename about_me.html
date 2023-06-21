@@ -1,7 +1,7 @@
 <html>
 <head>
   <title>About Me</title>
-  <style>
+  <style>/* add @media for a nerrow and wide*/
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
@@ -13,6 +13,8 @@
     
     p {
       line-height: 1.5;
+      font-family: "Times New Roman", Times, serif; 
+      background-color: #87e7e7;
     }
     
     a {
@@ -58,13 +60,26 @@
     div.skills li {
       margin-bottom: 5px;
     }
-  </style>
-</head>
+    .fixed-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #f5f5f5;
+    padding: 10px;
+    z-index: 999;
+  }
+</style>
 <body>
-  <a href="https://www.linkedin.com/in/tenzinwangden/">linkedin</a>
-  <a href="#Contact"><b>Contact</b></a>
-  <a href="https://github.com/TenzinWangden">Github</a>
-  <h1><b>Tenzin Wangden</b></h1>
+  <div class="fixed-links">
+    <a href="https://www.linkedin.com/in/tenzinwangden/" target="_blank">linkedin</a>
+    <a href="#Contact"><b>Contact</b></a>
+    <a href="https://github.com/TenzinWangden" target="_blank">Github</a>
+  </div>
+  
+  <h1>
+    <br></br>
+    <b>Tenzin Wangden</b></h1>
   
   <img src="https://media.licdn.com/dms/image/C5103AQEHbqBVoqTUCg/profile-displayphoto-shrink_800_800/0/1517529558216?e=1692835200&v=beta&t=3Owo33xeeO8fCWKiEOXoVjFJV3BK3uQrAlaqyra6o6U" alt="Tenzin Wangden">
   
@@ -75,9 +90,9 @@
   </p>
   
   <h2>Education</h2>
-  <p>
+  <div>
     Skillstorm - Java Microservices Certification Course
-  </p>
+  </div> 
   
   <div>
     <h2>Experience</h2>
@@ -101,8 +116,8 @@
                 <td>3</td>
             </tr>
             <tr>
-                <td colspan="2">Color</td>
-                <td colspan="2" style="background-color: red;">Unknown</td>
+                <td colspan="2">aaa</td>
+                <td colspan="2" style="background-color: red;">bbbb</td>
             </tr>
         </tbody>
     </table>
@@ -127,8 +142,8 @@
   </ul>
   
   <h2 id="Contact">Contact</h2>
-  <p>
-    tenzinwangden90@gmail.com
-  </p>
+    <div> 
+      tenzinwangden90@gmail.com
+    </div> 
 </body>
 </html>
