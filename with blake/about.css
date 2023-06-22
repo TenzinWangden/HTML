@@ -1,0 +1,31 @@
+h1{
+    position: relative;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 75px;
+}
+
+footer{
+    position: absolute;
+    text-align: center;
+}
+
+.fixed-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(245, 245, 245, 0.226); /* Transparent background */
+    padding: 10px;
+    z-index: 999;
+  }
+
+body{
+    background-image: url("https://i.ytimg.com/vi/sfeuvcWBKKE/maxresdefault.jpg");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    position: fixed;
+   }
