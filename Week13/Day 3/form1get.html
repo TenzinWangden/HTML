@@ -27,7 +27,7 @@
             dealt with in some way
 
 
-        We can have the user fill in important information
+        We can have the user fill in important information - each will be best suited to a different type of input
             - name
             - birthday
             - SSN
@@ -46,7 +46,7 @@
             - buttons
             - input
             - label
-            - select
+            - select (drop downs)
 
         The <input> tag is critical and can take on many types
             - text
@@ -54,6 +54,8 @@
             - number
             - color
             - email
+            - password -- doesn't show what is being typed 
+            - tel (telephone number) -- does validation for you
             - radio buttons
             - checkboxes
             - file uploads
@@ -65,8 +67,8 @@
      -->
 
     <!-- A form tag has two important attributes:
-            - method
-            - action
+            - method = what type of http request method
+            - action = where to send that request
      -->
 
     <!-- CRUD operations
@@ -77,17 +79,18 @@
         U = update
         D = delete
 
-        C is done with a Post request
-        R is done with a Get request
-        U is done with a Put request
-        D is done with a Delete request
+        C is done with a POST request
+        R is done with a GET request
+        U is done with a PUT request
+        D is done with a DELETE request
 
-        form's method property deals with Get and Post
+        form's method property deals with GET and POST
 
-        ___ - the form-data will be transmitted as part of the url's request parameters
+        GET - the form-data will be transmitted as part of the url's request parameters
                 localhost:5500/forms.html?name=Erica&favorite-food=apples
+                localhost:5500/forms.html?username=erica&password=0000 BAD
 
-        ___ - the form-data will be transmitted as part of the http request's body
+        POST - the form-data will be transmitted as part of the http request's body
               by default html forms use application/x-www-form-urlencoded  
               which is similar to json
                 
@@ -99,10 +102,16 @@
     <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
     <!-- EXAMPLE 1: MAKE A FORM THAT  makes a GET request to Google
          GET says "give me the resource in the action property" -->
-    <form method="" action="http://google.com">
+
+         <!-- =====================================================
+            TODO create a form that does a GET request to any url to see what happens 
+            =======================================================
+        -->
+
+    <form method="GET" action="https://amazon.com/search">
 
         <!-- All other previous tags are still relevant in a form -->
-        <p>GET form -- Go to Google.com/search?name=___</p>
+        <p>GET form -- Go to Amazon.com/?</p>
         <input type="text" name="animal" placeholder="cat">
 
         <!-- Add a button tag to submit the form, 
@@ -111,6 +120,7 @@
              -->
         <button type="submit">Submit</button>
         <button type="reset">Reset</button>
+    </form>
 
         <!-- Notice, not all characters are allowed in urls, because they have special meanings or could be misinterpretted
                 so some characters get encoded, for example
@@ -126,7 +136,7 @@
                 ) = %29
                 * = %2A
                 + = %2B
-                , = %2C
+                , = %2C -- This is a hexvalue so each digit can be 0123456789ABCDEF
                 - = %2D
                 . = %2E
                 / = %2F
@@ -138,7 +148,28 @@
                 ® = %AE
             -->
 
-    </form>
+            <!-- Likewise HTML doesn't like some special cahracters so instead use the character entity value or unicode value like &#1F601;
+Character	Entity	
+&	        &amp;	Interpreted as the beginning of an entity or character reference.
+<	        &lt;	Interpreted as the beginning of a tag
+>	        &gt;	Interpreted as the ending of a tag
+"	        &quot;	Interpreted as the beginning and end of an attribute's value.
+&nbsp;	    Interpreted as the non breaking space.
+–	        &ndash;	Interpreted as the en dash (half the width of an em unit).
+—	        &mdash;	Interpreted as the em dash (equal to width of an "m" character).
+©	        &copy;	Interpreted as the copyright sign.
+®	        &reg;	Interpreted as the registered sign.
+™	        &trade;	Interpreted as the trademark sign.
+≈	        &asymp;	Interpreted as almost equal to sign.
+≠	        &ne;	Interpreted as not equal to sign.
+£	        &pound;	Interpreted as the pound symbol.
+€	        &euro;	Interpreted as the euro symbol.
+°	        &deg;	Interpreted as the degree symbol.
+               -->
+    &#128512;
+<script>
+    console.log("hello world");
+</script>
 </body>
 
 </html>
